@@ -1,0 +1,33 @@
+{
+  "name": "create-vue-content-loader",
+  "homepage": "https://danilowoz.github.io/create-vue-content-loader",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "clipboard": "^2.0.0",
+    "css": "^2.2.1",
+    "react": "^16.2.0",
+    "react-click-outside": "tj/react-click-outside",
+    "react-content-loader": "^3.2.0",
+    "react-css": "^0.0.2",
+    "react-dom": "^16.1.1",
+    "react-live": "^1.7.1",
+    "react-scripts": "1.0.17",
+    "react-sketch": "^0.4.1",
+    "react-tippy": "^1.2.2",
+    "throttle-debounce": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
+  }
+}
