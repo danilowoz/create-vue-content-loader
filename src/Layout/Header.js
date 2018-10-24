@@ -40,12 +40,12 @@ class Header extends Component {
         ) : (
           <div className="app-header__loaded">
             <h1>
-              Create <strong>React Content Loader</strong>
+              Create <strong>Vue Content Loader</strong>
             </h1>
             <h2>
               Have you heard about{" "}
-              <a href="https://github.com/danilowoz/react-content-loader">
-                react-content-loader
+              <a href="https://github.com/egoist/vue-content-loader">
+                vue-content-loader
               </a>
               ? It&#39;s a SVG component to create <br />
               placeholder loading, like Facebook cards loading or also known as
@@ -56,7 +56,7 @@ class Header extends Component {
         <p className="app-assign__stars">
           <a
             className="github-button"
-            href="https://github.com/danilowoz/react-content-loader"
+            href="https://github.com/egoist/vue-content-loader"
             data-icon="octicon-star"
             data-show-count="true"
             aria-label="Star danilowoz/react-content-loader on GitHub"
@@ -64,21 +64,20 @@ class Header extends Component {
             without=""
             rel="noopener noreferrer"
           >
-            react-content-loader
+            vue-content-loader
           </a>
           <a
             className="github-button"
-            href="https://github.com/danilowoz/create-content-loader"
+            href="https://github.com/danilowoz/create-vue-content-loader"
             data-icon="octicon-star"
             data-show-count="true"
-            aria-label="Star danilowoz/create-content-loader on GitHub"
+            aria-label="Star danilowoz/create-vue-content-loader on GitHub"
             target="_blank"
             without=""
             rel="noopener noreferrer"
           >
-            create-content-loader
+            create-vue-content-loader
           </a>
-
           <a
             href="https://github.com/danilowoz"
             target="_blank"
@@ -87,6 +86,16 @@ class Header extends Component {
             className="app-assign__by"
           >
             by @danilowoz
+          </a>
+          and
+          <a
+            href="https://github.com/egoist"
+            target="_blank"
+            without=""
+            rel="noopener noreferrer"
+            className="app-assign__by"
+          >
+            @egoist
           </a>
         </p>
       </div>

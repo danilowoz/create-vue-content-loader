@@ -8,7 +8,6 @@ const Config = ({
   height,
   speed,
   size,
-  rtl,
   primaryColor,
   secondaryColor,
   guideline
@@ -27,21 +26,6 @@ const Config = ({
 
     <h4 className="properties">Propeties:</h4>
     <div>
-      <p>
-        <label htmlFor="rtl">RTL content:</label>
-        <label htmlFor="rtl" className="toggle">
-          <input
-            type="checkbox"
-            className="toggle-input"
-            checked={rtl}
-            name="rtl"
-            id="rtl"
-            onChange={_HandleCheckbox}
-          />
-          <span className={`toggle-check ${rtl ? "checked" : ""}`} />
-        </label>
-      </p>
-
       <p>
         <label htmlFor="width">width:</label>
         <input

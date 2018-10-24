@@ -1,3 +1,5 @@
+import template from "./template"
+
 const toFixed = n => parseFloat(Number(n).toFixed(2))
 
 export const JsonToSVG = json => {
@@ -81,17 +83,31 @@ export const CanvasAddedProp = target => {
   return newTarget
 }
 
-const regexCollection = /const MyLoader = props => \([\s\S]*?<ContentLoader[\s\S]*?rtl[\s\S]*?height={.*}[\s\S]*?width={.*}[\s\S]*?speed={.*}[\s\S]*?primaryColor=".*"[\s\S]*?secondaryColor=".*"[\s\S]*?{...props}[\s\S]*?>[.|\s]*?((.|\s)*)[.|\s]*?<\/ContentLoader>[\s\S]*?\)/
+const regexCollection = /<template>[\s\S]*?<content-loader[\s\S]*?:height=".*"[\s\S]*?:width=".*"[\s\S]*?:speed=".*"[\s\S]*?primaryColor=".*"[\s\S]*?secondaryColor=".*"[\s\S]*?>((.|\s)*)<\/content-loader>[\s\S]*?<\/template>[\s\S]*?/
 
 export const getReactInfo = component => {
-  const obj = {}
-  obj.width = Number(component.match(/width=({(.*?)}|"(.*?)")/)[2])
-  obj.height = Number(component.match(/height=({(.*?)}|"(.*?)")/)[2])
-  obj.speed = Number(component.match(/speed=({(.*?)}|"(.*?)")/)[2])
+  if (component) {
+    const obj = {}
 
-  obj.primaryColor = component.match(/primaryColor="(.*?)"/)[1]
-  obj.secondaryColor = component.match(/secondaryColor="(.*?)"/)[1]
-  obj.draw = component.match(regexCollection)[1].trim()
+    obj.width = Number(component.match(/width=({(.*?)}|"(.*?)")/)[3])
+    obj.height = Number(component.match(/height=({(.*?)}|"(.*?)")/)[3])
+    obj.speed = Number(component.match(/speed=({(.*?)}|"(.*?)")/)[3])
 
-  return obj
+    obj.primaryColor = component.match(/primaryColor="(.*?)"/)[1]
+    obj.secondaryColor = component.match(/secondaryColor="(.*?)"/)[1]
+    obj.draw = component.match(regexCollection)[1].trim()
+
+    return obj
+  }
+}
+
+export const VueToReact = (code, framework) => {
+  if (framework === "vue") {
+    const data = getReactInfo(code, framework)
+    const reactCode = template({ data, type: "react" })
+
+    return reactCode
+  }
+
+  return code
 }
