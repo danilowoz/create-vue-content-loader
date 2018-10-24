@@ -1,7 +1,5 @@
-Been change
-
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/4838076/38386691-d5d7fdc8-38eb-11e8-8845-8a6bdf581481.gif" alt="Create Content Loader" title="Create Content Loader" />
+  <img src="https://user-images.githubusercontent.com/4838076/47463322-cce36900-d7dd-11e8-8cf1-1b1c1288e268.png" alt="Create Content Loader" title="Create Content Loader" />
 </p>
 
 <p align="center">
